@@ -6,6 +6,7 @@ import Homepage from "./pages/Homepage/Homepage";
 import ShopPage from "./pages/shop/Shop";
 import Header from "./components/header/header";
 import SigninAndSignup from "./pages/signin-and-signup/SigninAndSignup";
+import Checkout from "./pages/checkout/Checkout";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/userAction";
 import "./App.css";
@@ -42,6 +43,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route exact path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to='/' />) : (<SigninAndSignup />)} />
         </Switch>
       </div>
