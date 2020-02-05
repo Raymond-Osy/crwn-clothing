@@ -1,11 +1,14 @@
 import React from "react";
-import "./Homepage.scss";
 import Directory from "../../components/directory/Directory";
+// import Carousel from "../../components/carousel/Carousel";
+import { HomePageContainer } from "./Hompage.style"
+// import "./Homepage.scss";
 
 const Homepage = () => (
-  <div className="homepage">
+  <HomePageContainer>
+    {/* <Carousel /> */}
     <Directory />
-  </div>
+  </HomePageContainer>
 );
 
 export default Homepage;
